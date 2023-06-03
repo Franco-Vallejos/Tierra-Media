@@ -22,6 +22,7 @@ public abstract class Promotion extends OfferdableItem{
 				this.mySights.add(s);
 				this.cost+=s.getCost();
 				this.time+=s.getTime();
+				System.out.println("lo encontre");
 				break;
 			}
 		}

@@ -14,8 +14,7 @@ public class Sight extends OfferdableItem {
 		this.name =name;
 		this.cost = cost;
 		this.time = time;
-		this.quota= quota;
-		
+		this.quota= quota;	
 	}
 
 	@Override

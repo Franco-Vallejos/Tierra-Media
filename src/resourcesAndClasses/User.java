@@ -1,6 +1,7 @@
 package resourcesAndClasses;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class User {
 	private String name;
@@ -77,5 +78,31 @@ public class User {
 		}
 		return false;
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		User other = (User) obj;
+		return Double.doubleToLongBits(money) == Double.doubleToLongBits(other.money)
+				&& Objects.equals(myList, other.myList) && myPref == other.myPref && Objects.equals(name, other.name)
+				&& Double.doubleToLongBits(spentMoney) == Double.doubleToLongBits(other.spentMoney)
+				&& Double.doubleToLongBits(spentTime) == Double.doubleToLongBits(other.spentTime)
+				&& Double.doubleToLongBits(time) == Double.doubleToLongBits(other.time);
+	}
+
+	@Override
+	public String toString() {
+		return "\nUser [name=" + name + ", money=" + money + ", time=" + time + ", myPref=" + myPref + ", myList="
+				+ myList + ", spentMoney=" + spentMoney + ", spentTime=" + spentTime + "]";
+	}
+	
+	
+	
+	
 	
 }
